@@ -1,6 +1,6 @@
-const dotenv = require('dotenv');
+import dotenv from 'dotenv';
 
-class Environment {
+export default class Environment {
   constructor() {
     dotenv.config();
   }
@@ -9,5 +9,3 @@ class Environment {
     return Number(process.env.PORT) || 3000;
   }
 }
-
-module.exports = Environment;

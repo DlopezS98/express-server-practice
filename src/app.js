@@ -1,10 +1,11 @@
-const express = require('express');
-const morgan = require('morgan');
-const cors = require('cors');
-const HomeRoutes = require('./routes/home.routes');
-const Environment = require('./config/environment');
+import express from 'express';
+import morgan from 'morgan';
+import cors from 'cors';
 
-class Application {
+import HomeRoutes from './routes/home.routes.js';
+import Environment from './config/environment.js';
+
+export default class Application {
 
   constructor() {
     this.app = express();
@@ -24,5 +25,3 @@ class Application {
     return this.app;
   }
 }
-
-module.exports = Application;
