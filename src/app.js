@@ -3,6 +3,7 @@ import morgan from 'morgan';
 import cors from 'cors';
 
 import HomeRoutes from './routes/home.routes.js';
+import UsersRoutes from './routes/users.routes.js';
 import Environment from './config/environment.js';
 
 export default class Application {
@@ -21,6 +22,7 @@ export default class Application {
 
     // routes...
     this.app.use('/api/v1/', new HomeRoutes().initialize());
+    this.app.use('/api/v1/users/', new UsersRoutes().initialize());
 
     return this.app;
   }

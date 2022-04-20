@@ -10,7 +10,6 @@ export default class HomeRoutes {
 
   initialize() {
     this.router.get('/', this.homeController.index);
-    this.router.post('/create', this.homeController.create);
     return this.router;
   }
 }
