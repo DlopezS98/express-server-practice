@@ -1,19 +1,22 @@
-import express from 'express';
+import express, { Express } from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
 
-import HomeRoutes from './routes/home.routes.js';
-import UsersRoutes from './routes/users.routes.js';
-import Environment from './config/environment.js';
+import HomeRoutes from './routes/home.routes';
+import UsersRoutes from './routes/users.routes';
+import Environment from './config/environment';
 
 export default class Application {
+
+  private readonly app: Express;
+  public env: Environment;
 
   constructor() {
     this.app = express();
     this.env = new Environment();
   }
 
-  initialize() {
+  initialize(): Express {
     // config...
     this.app.set('port', this.env.PORT);
     // middlewares...

@@ -1,6 +1,10 @@
-import Application from './app.js';
+import { Express } from 'express';
+
+import Application from './app';
 
 class Startup {
+  private readonly app: Express;
+  
   constructor() {
     this.app = new Application().initialize();
   }

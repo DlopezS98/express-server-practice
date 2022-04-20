@@ -1,5 +1,7 @@
+import IUsers from "../database/models/users.model";
+
 export default class UsersRepository {
-  #users = [{
+  private users: Array<IUsers> = [{
     id: '1200012',
     firstname: 'Danny',
     lastname: 'Lopez',
@@ -10,12 +12,12 @@ export default class UsersRepository {
     created_at: new Date('2022-04-16T04:06:53.240Z'),
   }];
 
-  getList() {
-    return this.#users;
+  getList(): Array<IUsers> {
+    return this.users;
   }
 
-  create(user) {
-    this.#users.push(user);
+  create(user: IUsers): IUsers {
+    this.users.push(user);
     return user;
   }
 }
