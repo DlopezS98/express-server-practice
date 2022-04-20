@@ -16,13 +16,15 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
-    "json-loader": "^0.5.7",
     "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.3"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/DlopezS98/express-server-practice.git"
   },
   "homepage": "https://github.com/DlopezS98/express-server-practice#readme",
-  "author_url": "https://github.com/DlopezS98"
+  "author_url": "https://github.com/DlopezS98",
 }
