@@ -2,7 +2,7 @@
   "name": "express-server-api",
   "version": "1.0.0",
   "description": "This is an example using node, express, jwt",
-  "main": "index.js",
+  "main": "build/src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "set NODE_ENV=production && node src/index.js",

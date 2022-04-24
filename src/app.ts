@@ -5,6 +5,7 @@ import cors from 'cors';
 import HomeRoutes from './routes/home.routes';
 import UsersRoutes from './routes/users.routes';
 import Environment from './config/environment';
+import pkg from '../package.json';
 
 export default class Application {
 
@@ -19,6 +20,7 @@ export default class Application {
   initialize(): Express {
     // config...
     this.app.set('port', this.env.PORT);
+    this.app.set('pkg', pkg);
     // middlewares...
     this.app.use(morgan('dev'));
     this.app.use(cors());
