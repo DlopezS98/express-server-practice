@@ -1,4 +1,4 @@
-import express, { Express } from 'express';
+import express, { Express, json } from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
 
@@ -24,6 +24,7 @@ export default class Application {
     // middlewares...
     this.app.use(morgan('dev'));
     this.app.use(cors());
+    this.app.use(json());
 
     // routes...
     this.app.use('/api/v1/', new HomeRoutes().initialize());

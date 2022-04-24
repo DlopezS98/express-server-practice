@@ -13,6 +13,7 @@ export default class UsersRoutes {
 
   initialize() {
     this.router.get('/', this.usersController.index);
+    this.router.post('/', this.usersController.create);
     return this.router;
   }
 }
